@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="center" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <VBox>
+        <ListView fx:id="employeeListView" />
+      <HBox prefHeight="29.0" prefWidth="248.0">
+         <children>
+            <Button fx:id="deleteSelectedButton" mnemonicParsing="false" onAction="#deleteEmployee" prefHeight="25.0" prefWidth="254.0" text="Delete Selected" textFill="#dd0707" />
+         </children>
+      </HBox>
+    </VBox>
+    <VBox spacing="10.0">
+        <HBox>
+            <Label prefWidth="100" text="First Name" />
+            <TextField fx:id="firstNameTextField" prefWidth="150" />
+        </HBox>
+        <HBox>
+            <Label prefWidth="100" text="Last Name" />
+            <TextField fx:id="lastNameTextField" prefWidth="150" />
+        </HBox>
+        <HBox>
+            <Label prefWidth="100" text="Is active" />
+            <CheckBox fx:id="isActiveCheckBox" />
+        </HBox>
+        <HBox>
+            <Label prefWidth="100" text="Misc" />
+            <TextField prefWidth="150" />
+        </HBox>
+        <HBox spacing="115.0">
+            <Button fx:id="clearButton" onAction="#clearData" text="Clear" />
+            <Button fx:id="addNewButton" alignment="CENTER" contentDisplay="RIGHT" onAction="#addEmployee" prefHeight="26.0" prefWidth="87.0" text="Add New" textAlignment="CENTER" />
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+        </HBox>
+    </VBox>
+</HBox>
